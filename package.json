@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "browserslist": [
-    "last 5 versions"
+    "last 2 chrome versions",
+    "last 2 firefox versions",
+    "last 2 ios versions"
   ],
   "devDependencies": {
     "@babel/core": "^7.7.0",

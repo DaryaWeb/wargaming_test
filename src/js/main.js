@@ -1,3 +1,5 @@
+"use stript";
+
 // Menu
 const navSlide = () => {
     const burger = document.querySelector('.burger');
