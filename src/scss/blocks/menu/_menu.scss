@@ -75,13 +75,12 @@
         top: 67px;
         right: -100%;
         width: 50%;
-        background: linear-gradient(45deg, $main-color4, $main-color1);
+        background: rgba($black-color, 0.7);
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 67px);
         transition: right 0.5s ease-in;
-        border-radius: $border-radius_menu;
 
         li {
             opacity: 0;

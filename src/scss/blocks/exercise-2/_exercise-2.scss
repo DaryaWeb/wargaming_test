@@ -192,10 +192,36 @@
                 @media (max-width: 500px) {
                     &[data-pos="-1"] {
                         transform: translateX(-10%) scale(.9);
+
+                        &::before {
+                            content: '<';
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            position: absolute;
+                            z-index: 100000;
+                            left: -50px;
+                            font-size: 50px;
+                            padding: 20px;
+                            color: $white-color;
+                        }
                     }
 
                     &[data-pos="1"] {
                         transform: translateX(10%) scale(.9);
+
+                        &::before {
+                            content: '>';
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            position: absolute;
+                            z-index: 100000;
+                            right: -50px;
+                            font-size: 50px;
+                            padding: 20px;
+                            color: $white-color;
+                        }
                     }
 
 

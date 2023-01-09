@@ -1,5 +1,6 @@
 header {
     backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
     position: fixed;
     width: 100%;
     box-shadow: $grey-shadow;
