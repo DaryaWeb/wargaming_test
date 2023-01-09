@@ -1,0 +1,60 @@
+$heart: 60px;
+$stroke: 10px;
+
+@mixin size($w, $h: $w) {
+    width: $w;
+    height: $h;
+}
+
+footer {
+    flex: 0 0 auto;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(50px);
+    box-shadow: 0px 2px 8px 0px rgb(50 50 50 / 50%);
+    width: 100%;
+
+    .footer__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            color: $white-color;
+            text-align: center;
+        }
+    }
+}
+
+.heart {
+    @include size($heart);
+
+    &__path {
+        animation: groove 6s 3000 alternate;
+        fill: transparent;
+        stroke: $white-color;
+        stroke-dasharray: 0;
+        stroke-width: $stroke;
+    }
+}
+
+@keyframes groove {
+
+    0%,
+    100% {
+        stroke-dasharray: 1600;
+    }
+
+    25%,
+    75% {
+        stroke-dasharray: 70;
+    }
+
+    50% {
+        stroke-dasharray: 150;
+    }
+}

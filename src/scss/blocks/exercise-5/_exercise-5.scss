@@ -1,0 +1,267 @@
+@keyframes markGrow {
+    0% {
+        color: $white-color;
+    }
+
+    100% {
+        color: $white-color;
+    }
+}
+
+@keyframes tagPopup {
+    0% {
+        font-size: 0;
+    }
+
+    100% {
+        font-size: 150px;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+
+.game {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+
+    &__container {
+        max-width: 600px;
+        min-width: 200px;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 20px;
+        box-shadow: $grey-shadow;
+        min-height: 670px;
+        border-radius: $border-radius;
+    }
+
+    &__choose {
+        min-height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+            font-size: 36px;
+            text-align: center;
+        }
+
+        &--text {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+
+    &__form {
+        input[type="radio"] {
+            visibility: hidden;
+
+            &:checked+label {
+                cursor: pointer;
+                transition: 300ms;
+                box-sizing: border-box;
+                color: $white-color;
+                border-color: $white-color;
+            }
+        }
+    }
+
+    &__input {
+        display: block;
+        text-align: center;
+        font-size: 36px;
+        transition: 300ms;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: $border-radius;
+        border: 1px dashed transparent;
+        background: transparent;
+        margin: 0 auto;
+        color: #fff;
+
+        &:hover {
+            text-shadow: $white-shadow;
+        }
+    }
+
+    &__tag {
+        font-weight: bold;
+        font-size: 80px;
+        transition: 0.3s;
+        font-family: $font-marker;
+        line-height: 1.3;
+
+        &:hover {
+            cursor: pointer;
+            text-shadow: $white-shadow;
+        }
+    }
+
+    &__score {
+        display: flex;
+        justify-content: space-around;
+        width: 450px;
+    }
+
+    &__game-board {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+        align-items: stretch;
+        width: 450px;
+        height: 450px;
+    }
+
+    &__field {
+        flex-basis: 33%;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 120px;
+        text-align: center;
+        height: 33%;
+        line-height: 1.2;
+        font-family: $font-marker;
+    }
+
+    &__cell {
+        &--middle {
+            border-left: 2px solid $white-color;
+            border-right: 2px solid $white-color;
+        }
+
+        &--center {
+            border-top: 2px solid $white-color;
+            border-bottom: 2px solid $white-color;
+        }
+    }
+
+    &__win {
+        cursor: pointer;
+        text-shadow: $white-shadow;
+        color: $white-color;
+        animation: markGrow 2000ms;
+        position: relative;
+    }
+
+    &__animated {
+        animation-name: tagPopup;
+        animation-duration: 250ms;
+    }
+
+    &__reset {
+        border: none;
+        color: $white-color;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+}
+
+
+.score {
+    &__div {
+        width: 33%;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__header {
+        transition: 300ms;
+        padding: 8px;
+
+        &--active {
+
+            svg path,
+            svg circle {
+                transition: 300ms;
+                filter: drop-shadow(0px 0px 1px $white-color);
+            }
+        }
+
+    }
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 580px) {
+    @keyframes tagPopup {
+        0% {
+            font-size: 0;
+        }
+
+        100% {
+            font-size: 50px;
+        }
+    }
+
+    .game {
+        &__game-board {
+            height: 300px;
+            width: 300px;
+            margin: 40px 0;
+        }
+
+        &__container {
+            min-height: 600px;
+
+            max-width: calc(100% - 2em);
+        }
+
+        &__input {
+            font-size: 24px;
+        }
+
+        &__score {
+            width: 300px;
+        }
+
+        &__choose {
+            min-height: 560px;
+            min-width: 150px;
+        }
+
+        &__field {
+            font-size: 80px;
+            line-height: 1.2;
+        }
+    }
+
+    .score__header {
+        font-size: 18px;
+    }
+
+
+}

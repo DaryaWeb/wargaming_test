@@ -1,0 +1,19 @@
+header {
+    backdrop-filter: blur(50px);
+    position: fixed;
+    width: 100%;
+    box-shadow: $grey-shadow;
+    padding: 19px 15px;
+    min-height: 40px;
+    z-index: 7;
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}

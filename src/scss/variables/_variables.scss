@@ -1,0 +1,36 @@
+// Colors
+$dark-color: #232d43;
+$white-color: #fff;
+$black-color: #000;
+$grey-color: #323232;
+$light_grey-color: #062744;
+$main-color1: #23d5ab;
+$main-color2:#23a6d5;
+$main-color3:#8B5CF6;
+$main-color4:#ee7752;
+$main-color5:#EC4899;
+$main-color6:#e73c7e;
+$main-gradient: linear-gradient(45deg, $main-color3, $main-color5, $main-color2, $main-color1, $main-color4, $main-color6);
+
+//Sizes
+$border-radius: 20px;
+$border-radius_menu: 20px 0 0 20px;
+$image-big: 100px;
+$image-small: 80px;
+$padding: 10px;
+$card-container-padding: 30px;
+
+//Animation
+$grad-direction: 0deg;
+$card-transition: 0.6s ease-out;
+$card-transition-fast: 0.4s ease-out;
+
+// Fonts
+$font-marker: 'Indie Flower', cursive;
+$font-raleway: 'Raleway', sans-serif;
+$font-quote: 'Catamaran', sans-serif;
+
+// Shadows
+$white-shadow: 2px 2px 10px $white-color;
+$black-shadow: 1px 1px 20px $black-color;
+$grey-shadow: 0px 2px 8px 0px rgba($grey-color, 0.5);
